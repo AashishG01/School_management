@@ -20,7 +20,7 @@ const TeacherClasses = () => {
                                 <div className="class-card-badge">{c.cls}</div>
                                 <div>
                                     <div className="card-title">Class {c.cls}</div>
-                                    <div style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: "'DM Mono', monospace" }}>
+                                    <div style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: "'JetBrains Mono', monospace" }}>
                                         {c.subject} · {c.role}
                                     </div>
                                 </div>
@@ -29,19 +29,19 @@ const TeacherClasses = () => {
                         <div className="card-body">
                             <div style={{ display: 'flex', gap: '16px', marginBottom: '16px' }}>
                                 <div style={{ flex: 1, textAlign: 'center', padding: '12px', background: 'var(--paper)', borderRadius: '10px' }}>
-                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Playfair Display', serif", color: 'var(--sage)' }}>
+                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'var(--sage)' }}>
                                         {c.students.length || '38'}
                                     </div>
                                     <div style={{ fontSize: '10px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Students</div>
                                 </div>
                                 <div style={{ flex: 1, textAlign: 'center', padding: '12px', background: 'var(--paper)', borderRadius: '10px' }}>
-                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Playfair Display', serif", color: 'var(--slate)' }}>
+                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'var(--slate)' }}>
                                         {c.students.length > 0 ? Math.round(c.students.reduce((a, s) => a + s.attendance, 0) / c.students.length) : 89}%
                                     </div>
                                     <div style={{ fontSize: '10px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Attendance</div>
                                 </div>
                                 <div style={{ flex: 1, textAlign: 'center', padding: '12px', background: 'var(--paper)', borderRadius: '10px' }}>
-                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Playfair Display', serif", color: 'var(--gold)' }}>
+                                    <div style={{ fontSize: '20px', fontWeight: 900, fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'var(--gold)' }}>
                                         {c.students.length > 0 ? Math.round(c.students.reduce((a, s) => a + s.avgScore, 0) / c.students.length) : 76}%
                                     </div>
                                     <div style={{ fontSize: '10px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Avg Score</div>
@@ -54,13 +54,13 @@ const TeacherClasses = () => {
                                         <div className="student-name">{s.name}</div>
                                         <div className="student-meta">Roll #{s.rollNo} · {s.attendance}%</div>
                                     </div>
-                                    <span style={{ fontFamily: "'DM Mono', monospace", fontSize: '12px', color: s.avgScore >= 80 ? 'var(--sage)' : 'var(--muted)' }}>
+                                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '12px', color: s.avgScore >= 80 ? 'var(--sage)' : 'var(--muted)' }}>
                                         {s.avgScore}%
                                     </span>
                                 </div>
                             ))}
                             {c.students.length > 4 && (
-                                <div style={{ textAlign: 'center', padding: '8px', fontSize: '12px', color: 'var(--muted)', fontFamily: "'DM Mono', monospace" }}>
+                                <div style={{ textAlign: 'center', padding: '8px', fontSize: '12px', color: 'var(--muted)', fontFamily: "'JetBrains Mono', monospace" }}>
                                     +{c.students.length - 4} more students
                                 </div>
                             )}

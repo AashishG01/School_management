@@ -32,12 +32,12 @@ const Classes = () => {
                             ))}
                             <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                                 {cls.sections[0].subjects.slice(0, 5).map((sub, i) => (
-                                    <span key={i} style={{ fontSize: '10px', padding: '3px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'DM Mono', monospace", color: 'var(--muted)' }}>
+                                    <span key={i} style={{ fontSize: '10px', padding: '3px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'JetBrains Mono', monospace", color: 'var(--muted)' }}>
                                         {sub}
                                     </span>
                                 ))}
                                 {cls.sections[0].subjects.length > 5 && (
-                                    <span style={{ fontSize: '10px', padding: '3px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'DM Mono', monospace", color: 'var(--muted)' }}>
+                                    <span style={{ fontSize: '10px', padding: '3px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'JetBrains Mono', monospace", color: 'var(--muted)' }}>
                                         +{cls.sections[0].subjects.length - 5} more
                                     </span>
                                 )}

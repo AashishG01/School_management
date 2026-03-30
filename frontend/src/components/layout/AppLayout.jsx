@@ -1,6 +1,7 @@
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import DoubtChat from '../ui/DoubtChat';
 
 const pageTitles = {
     // Admin
@@ -56,6 +57,7 @@ const AppLayout = ({ role, navSections, user }) => {
                     <Outlet />
                 </div>
             </div>
+            {role === 'student' && <DoubtChat />}
             <Link to="/" className="back-btn">
                 ← Switch Role
             </Link>

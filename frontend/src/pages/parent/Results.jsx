@@ -31,7 +31,7 @@ const Results = () => {
                                 <div className="subject-teacher">{s.teacher}</div>
                             </div>
                             <div style={{ textAlign: 'right', marginRight: '16px' }}>
-                                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: '12px' }}>{s.obtained}/{s.maxMarks}</div>
+                                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '12px' }}>{s.obtained}/{s.maxMarks}</div>
                             </div>
                             <div>
                                 <div className="grade-badge" style={{ color: s.color }}>{s.grade}</div>
@@ -42,7 +42,7 @@ const Results = () => {
                 </div>
                 <div style={{ padding: '16px 24px', borderTop: '2px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontWeight: 700, fontSize: '14px' }}>Total</span>
-                    <span style={{ fontFamily: "'DM Mono', monospace", fontWeight: 700 }}>{totalObtained}/{totalMax} ({percentage}%)</span>
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700 }}>{totalObtained}/{totalMax} ({percentage}%)</span>
                 </div>
             </div>
         </>

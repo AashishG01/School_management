@@ -12,6 +12,8 @@ import AdminTimetable from './pages/admin/Timetable';
 import AdminAnnouncements from './pages/admin/Announcements';
 import AdminTeachers from './pages/admin/Teachers';
 import AdminAnalytics from './pages/admin/Analytics';
+import AdminPayroll from './pages/admin/Payroll';
+import AdminReportCards from './pages/admin/ReportCards';
 
 // Teacher pages
 import TeacherDashboard from './pages/teacher/Dashboard';
@@ -114,8 +116,8 @@ const studentNav = [
 ];
 
 const users = {
-  admin: { name: 'Priya Sharma', email: 'admin@educore.in', initial: 'P' },
-  teacher: { name: 'Rahul Mehta', email: 'r.mehta@educore.in', initial: 'R' },
+  admin: { name: 'Priya Sharma', email: 'admin@acadex.in', initial: 'P' },
+  teacher: { name: 'Rahul Mehta', email: 'r.mehta@acadex.in', initial: 'R' },
   parent: { name: 'Anita Patel', email: 'a.patel@parent.in', initial: 'A' },
   student: { name: 'Aryan Patel', email: 'aryan@student.in', initial: 'Ar' },
 };
@@ -136,9 +138,9 @@ function App() {
           <Route path="timetable" element={<AdminTimetable />} />
           <Route path="announcements" element={<AdminAnnouncements />} />
           <Route path="teachers" element={<AdminTeachers />} />
-          <Route path="payroll" element={<AdminTeachers />} />
+          <Route path="payroll" element={<AdminPayroll />} />
           <Route path="analytics" element={<AdminAnalytics />} />
-          <Route path="report-cards" element={<AdminAnalytics />} />
+          <Route path="report-cards" element={<AdminReportCards />} />
         </Route>
 
         {/* Teacher Routes */}

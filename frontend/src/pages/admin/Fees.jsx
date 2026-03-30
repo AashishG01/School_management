@@ -53,8 +53,8 @@ const Fees = () => {
                                 <ResponsiveContainer width="100%" height={220}>
                                     <BarChart data={monthlyRevenue}>
                                         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                        <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'DM Mono', monospace" }} />
-                                        <YAxis tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}K`} />
+                                        <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                                        <YAxis tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}K`} />
                                         <Tooltip formatter={(v) => [`₹${v.toLocaleString()}`, 'Revenue']} />
                                         <Bar dataKey="revenue" fill="var(--sage)" radius={[4, 4, 0, 0]} />
                                     </BarChart>
@@ -105,12 +105,12 @@ const Fees = () => {
                             <tbody>
                                 {feePayments.map(p => (
                                     <tr key={p.id}>
-                                        <td style={{ fontFamily: "'DM Mono', monospace", fontSize: '12px', color: 'var(--muted)' }}>{p.receipt || '—'}</td>
+                                        <td style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '12px', color: 'var(--muted)' }}>{p.receipt || '—'}</td>
                                         <td style={{ fontWeight: 600 }}>{p.studentName}</td>
                                         <td>{p.class}</td>
                                         <td style={{ fontSize: '12px' }}>{p.type}</td>
-                                        <td style={{ fontFamily: "'DM Mono', monospace" }}>₹{p.amount.toLocaleString()}</td>
-                                        <td style={{ fontFamily: "'DM Mono', monospace", fontSize: '12px', color: 'var(--muted)' }}>{p.date}</td>
+                                        <td style={{ fontFamily: "'JetBrains Mono', monospace" }}>₹{p.amount.toLocaleString()}</td>
+                                        <td style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '12px', color: 'var(--muted)' }}>{p.date}</td>
                                         <td style={{ fontSize: '12px' }}>{p.method}</td>
                                         <td><span className={`status-chip ${p.status}`}>{p.status.charAt(0).toUpperCase() + p.status.slice(1)}</span></td>
                                     </tr>
@@ -141,8 +141,8 @@ const Fees = () => {
                                 {feeStructure.map((f, i) => (
                                     <tr key={i}>
                                         <td style={{ fontWeight: 600 }}>{f.type}</td>
-                                        <td style={{ fontFamily: "'DM Mono', monospace" }}>₹{f.amount.toLocaleString()}</td>
-                                        <td style={{ fontFamily: "'DM Mono', monospace" }}>₹{f.perTerm.toLocaleString()}</td>
+                                        <td style={{ fontFamily: "'JetBrains Mono', monospace" }}>₹{f.amount.toLocaleString()}</td>
+                                        <td style={{ fontFamily: "'JetBrains Mono', monospace" }}>₹{f.perTerm.toLocaleString()}</td>
                                         <td style={{ fontSize: '12px', color: 'var(--muted)' }}>{f.frequency}</td>
                                     </tr>
                                 ))}
@@ -150,8 +150,8 @@ const Fees = () => {
                             <tfoot>
                                 <tr style={{ fontWeight: 700 }}>
                                     <td>Total</td>
-                                    <td style={{ fontFamily: "'DM Mono', monospace" }}>₹{feeStructure.reduce((s, f) => s + f.amount, 0).toLocaleString()}</td>
-                                    <td style={{ fontFamily: "'DM Mono', monospace" }}>₹{feeStructure.reduce((s, f) => s + f.perTerm, 0).toLocaleString()}</td>
+                                    <td style={{ fontFamily: "'JetBrains Mono', monospace" }}>₹{feeStructure.reduce((s, f) => s + f.amount, 0).toLocaleString()}</td>
+                                    <td style={{ fontFamily: "'JetBrains Mono', monospace" }}>₹{feeStructure.reduce((s, f) => s + f.perTerm, 0).toLocaleString()}</td>
                                     <td></td>
                                 </tr>
                             </tfoot>

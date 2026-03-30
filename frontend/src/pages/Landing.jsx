@@ -15,7 +15,7 @@ const Landing = () => {
             <div className="landing-noise"></div>
             <div className="landing-header">
                 <div className="logo-mark">E</div>
-                <span className="logo-text">EduCore</span>
+                <span className="logo-text">Acadex</span>
             </div>
             <div className="landing-hero">
                 <p className="hero-eyebrow">School Management System</p>

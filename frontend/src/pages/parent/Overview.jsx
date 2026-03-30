@@ -35,7 +35,7 @@ const ParentOverview = () => {
                     <div className="card-body">
                         {studentAttendanceHistory.map((d, i) => (
                             <div className="student-row" key={i}>
-                                <div style={{ fontSize: '13px', fontFamily: "'DM Mono', monospace", color: 'var(--muted)', flex: 1 }}>{d.date}</div>
+                                <div style={{ fontSize: '13px', fontFamily: "'JetBrains Mono', monospace", color: 'var(--muted)', flex: 1 }}>{d.date}</div>
                                 <span className={`status-chip ${d.status.toLowerCase()}`}>{d.status}</span>
                             </div>
                         ))}

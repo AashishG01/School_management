@@ -9,7 +9,7 @@ const StudentAttendance = () => {
         <>
             <div className="page-header">
                 <h2>Attendance History</h2>
-                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: '13px', color: 'var(--sage)', fontWeight: 600 }}>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '13px', color: 'var(--sage)', fontWeight: 600 }}>
                     {Math.round((present / total) * 100)}% Overall
                 </span>
             </div>
@@ -21,8 +21,8 @@ const StudentAttendance = () => {
                         <ResponsiveContainer width="100%" height={220}>
                             <BarChart data={monthlyAttendance}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'DM Mono', monospace" }} />
-                                <YAxis domain={[80, 100]} tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} tickFormatter={v => `${v}%`} />
+                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                                <YAxis domain={[80, 100]} tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} tickFormatter={v => `${v}%`} />
                                 <Tooltip formatter={v => [`${v}%`, 'Rate']} />
                                 <Bar dataKey="rate" fill="var(--sage)" radius={[4, 4, 0, 0]} />
                             </BarChart>
@@ -34,7 +34,7 @@ const StudentAttendance = () => {
                     <div className="card-body">
                         {studentAttendanceHistory.map((d, i) => (
                             <div className="student-row" key={i}>
-                                <div style={{ fontSize: '13px', fontFamily: "'DM Mono', monospace", color: 'var(--muted)', flex: 1 }}>{d.date}</div>
+                                <div style={{ fontSize: '13px', fontFamily: "'JetBrains Mono', monospace", color: 'var(--muted)', flex: 1 }}>{d.date}</div>
                                 <span className={`status-chip ${d.status.toLowerCase()}`}>{d.status}</span>
                             </div>
                         ))}

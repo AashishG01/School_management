@@ -1,11 +1,24 @@
+import { useNavigate } from 'react-router-dom';
 import { weeklyAttendance } from '../../data/attendance';
 import { feeCollection } from '../../data/fees';
 import { recentAdmissions } from '../../data/students';
+import { useToast } from '../../components/ui/Toast';
 
 const AdminDashboard = () => {
+    const toast = useToast();
+    const navigate = useNavigate();
+
+    const handleAction = (action) => {
+        switch (action) {
+            case 'student': navigate('/admin/students'); break;
+            case 'broadcast': navigate('/admin/announcements'); break;
+            case 'report': toast('Report cards generated for all classes!', 'success'); break;
+            case 'fee': toast('Fee reminder sent to 32 students with pending dues', 'success'); break;
+        }
+    };
+
     return (
         <>
-            {/* Stats Row */}
             <div className="stats-row">
                 <div className="stat-card gold">
                     <div className="stat-accent"></div>
@@ -37,7 +50,6 @@ const AdminDashboard = () => {
                 </div>
             </div>
 
-            {/* Attendance Chart + Quick Actions */}
             <div className="grid-3">
                 <div className="card">
                     <div className="card-header">
@@ -67,22 +79,22 @@ const AdminDashboard = () => {
                     </div>
                     <div className="card-body">
                         <div className="actions-grid">
-                            <div className="action-btn">
+                            <div className="action-btn" onClick={() => handleAction('student')}>
                                 <span className="action-icon">➕</span>
                                 <span className="action-label">Add Student</span>
                                 <span className="action-desc">New enrollment</span>
                             </div>
-                            <div className="action-btn">
+                            <div className="action-btn" onClick={() => handleAction('broadcast')}>
                                 <span className="action-icon">📣</span>
                                 <span className="action-label">Broadcast</span>
                                 <span className="action-desc">Send announcement</span>
                             </div>
-                            <div className="action-btn">
+                            <div className="action-btn" onClick={() => handleAction('report')}>
                                 <span className="action-icon">📄</span>
                                 <span className="action-label">Report Cards</span>
                                 <span className="action-desc">Generate all</span>
                             </div>
-                            <div className="action-btn">
+                            <div className="action-btn" onClick={() => handleAction('fee')}>
                                 <span className="action-icon">💳</span>
                                 <span className="action-label">Fee Reminder</span>
                                 <span className="action-desc">Send overdue</span>
@@ -92,12 +104,11 @@ const AdminDashboard = () => {
                 </div>
             </div>
 
-            {/* Recent Admissions + Fee Collection */}
             <div className="grid-2">
                 <div className="card">
                     <div className="card-header">
                         <div className="card-title">Recent Admissions</div>
-                        <span className="card-action">View all →</span>
+                        <span className="card-action" onClick={() => navigate('/admin/admissions')}>View all →</span>
                     </div>
                     <div className="card-body">
                         {recentAdmissions.map((s, i) => (
@@ -117,7 +128,7 @@ const AdminDashboard = () => {
                 <div className="card">
                     <div className="card-header">
                         <div className="card-title">Fee Collection</div>
-                        <span className="card-action">Full report →</span>
+                        <span className="card-action" onClick={() => navigate('/admin/fees')}>Full report →</span>
                     </div>
                     <div className="card-body">
                         {feeCollection.map((f, i) => (

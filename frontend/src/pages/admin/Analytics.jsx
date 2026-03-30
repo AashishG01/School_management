@@ -66,8 +66,8 @@ const Analytics = () => {
                         <ResponsiveContainer width="100%" height={220}>
                             <LineChart data={enrollmentTrend}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                <XAxis dataKey="year" tick={{ fontSize: 11, fontFamily: "'DM Mono', monospace" }} />
-                                <YAxis tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} />
+                                <XAxis dataKey="year" tick={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                                <YAxis tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
                                 <Tooltip />
                                 <Line type="monotone" dataKey="students" stroke="var(--gold)" strokeWidth={2} dot={{ fill: 'var(--gold)', r: 4 }} />
                             </LineChart>
@@ -80,8 +80,8 @@ const Analytics = () => {
                         <ResponsiveContainer width="100%" height={220}>
                             <BarChart data={monthlyRevenue}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'DM Mono', monospace" }} />
-                                <YAxis tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}K`} />
+                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                                <YAxis tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}K`} />
                                 <Tooltip formatter={(v) => [`₹${v.toLocaleString()}`, 'Revenue']} />
                                 <Bar dataKey="revenue" fill="var(--sage)" radius={[4, 4, 0, 0]} />
                             </BarChart>
@@ -97,8 +97,8 @@ const Analytics = () => {
                         <ResponsiveContainer width="100%" height={220}>
                             <LineChart data={monthlyAttendance}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'DM Mono', monospace" }} />
-                                <YAxis domain={[80, 100]} tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} tickFormatter={v => `${v}%`} />
+                                <XAxis dataKey="month" tick={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                                <YAxis domain={[80, 100]} tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} tickFormatter={v => `${v}%`} />
                                 <Tooltip formatter={v => [`${v}%`, 'Rate']} />
                                 <Line type="monotone" dataKey="rate" stroke="var(--sage)" strokeWidth={2} dot={{ fill: 'var(--sage)', r: 4 }} />
                             </LineChart>
@@ -111,8 +111,8 @@ const Analytics = () => {
                         <ResponsiveContainer width="100%" height={220}>
                             <BarChart data={classDistribution}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                <XAxis dataKey="class" tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} />
-                                <YAxis tick={{ fontSize: 10, fontFamily: "'DM Mono', monospace" }} />
+                                <XAxis dataKey="class" tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
+                                <YAxis tick={{ fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
                                 <Tooltip />
                                 <Bar dataKey="students" fill="var(--slate)" radius={[4, 4, 0, 0]} />
                             </BarChart>

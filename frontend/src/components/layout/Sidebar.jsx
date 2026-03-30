@@ -15,7 +15,7 @@ const Sidebar = ({ role, navSections, user }) => {
             <div className="sidebar-top">
                 <div className="sidebar-logo" onClick={() => navigate('/')}>
                     <div className="logo-mark">E</div>
-                    <span className="logo-text">EduCore</span>
+                    <span className="logo-text">Acadex</span>
                 </div>
                 <div className={`role-pill ${roleColors[role].pill}`}>
                     {roleColors[role].text}

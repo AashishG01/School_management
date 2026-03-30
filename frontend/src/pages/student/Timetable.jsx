@@ -28,7 +28,7 @@ const StudentTimetable = () => {
                             ...timetableData.days.map((day, di) => {
                                 const subject = schedule[day]?.[pi];
                                 if (isBreak) {
-                                    return <div className="tt-cell" key={`${pi}-${di}`} style={{ background: 'var(--cream)', fontFamily: "'DM Mono', monospace", fontSize: '10px', color: 'var(--muted)' }}>{period.label}</div>;
+                                    return <div className="tt-cell" key={`${pi}-${di}`} style={{ background: 'var(--cream)', fontFamily: "'JetBrains Mono', monospace", fontSize: '10px', color: 'var(--muted)' }}>{period.label}</div>;
                                 }
                                 if (!subject) {
                                     return <div className="tt-cell" key={`${pi}-${di}`} style={{ background: 'var(--cream)', color: 'var(--muted)', fontSize: '10px' }}>—</div>;

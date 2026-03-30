@@ -13,7 +13,7 @@ const ParentAnnouncements = () => {
                                 <div style={{ flex: 1 }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <div className="announce-title">{a.title}</div>
-                                        <span style={{ fontSize: '9px', padding: '2px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'DM Mono', monospace", color: 'var(--muted)', flexShrink: 0 }}>
+                                        <span style={{ fontSize: '9px', padding: '2px 8px', borderRadius: '999px', background: 'var(--paper)', border: '1px solid var(--border)', fontFamily: "'JetBrains Mono', monospace", color: 'var(--muted)', flexShrink: 0 }}>
                                             {a.target}
                                         </span>
                                     </div>
